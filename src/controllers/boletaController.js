@@ -19,14 +19,14 @@ router.get('/:id', async(req,res)=>{
 
 router.post('/', async(req,res)=>{
     const newBoleta = await boletaService.createBoleta(req.body);
-    if(newAoleta){
+    if(newBoleta){
         res.status(201).json(newBoleta);
     }else{
         res.status(404).json(newBoleta);
     }
 });
 
-router.put('/id:', async(req,res)=>{
+router.put('/:id', async(req,res)=>{
     const updateBoleta = await boletaService.updateBoleta(req.params.id, req.body);
     if(updateBoleta){
         res.json(updateBoleta);

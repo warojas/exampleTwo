@@ -1,5 +1,5 @@
-const articulo = require('../models/articulo');
-const articuloRepository = require('../repositories/articuloRepository');
+const articulo = require('../models/articulos');
+const articuloRepository = require('../repositories/articulosRepository');
 
 class articuloService{
     getAllArticulo(){
@@ -10,8 +10,8 @@ class articuloService{
         return articuloRepository.findById(id);
     }
 
-    createArticulo(boletaData){
-        return boletaRepository.create(boletaData);
+    createArticulo(articuloData){
+        return articuloRepository.create(articuloData);
     }
 
     updateArticulo(id, articuloData){

@@ -19,7 +19,7 @@ router.get('/:id', async(req,res)=>{
 
 router.post('/', async(req,res)=>{
     const newPersonal = await personalService.createPersonal(req.body);
-    if(newAoleta){
+    if(newPersonal){
         res.status(201).json(newPersonal);
     }else{
         res.status(404).json(newPersonal);
